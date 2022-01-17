@@ -1,0 +1,64 @@
+2A.
+
+package AccessModifiers;
+
+public class DefaultAccessSpecifier {
+	void display() 
+    { 
+        System.out.println("You are using defalut access specifier"); 
+    } 
+	public static void main(String[] args) {
+		System.out.println("Dafault Access Specifier");
+		DefaultAccessSpecifier obj = new DefaultAccessSpecifier(); 		  
+       obj.display(); 
+	}
+}
+========================================================================================
+2B
+
+package AccessModifiers;
+
+public class PrivateAccessSpecifier {
+		   private void display() { 
+		        System.out.println("You are using private access specifier"); 
+		    } 
+			public static void main(String[] args) {
+				//private
+				System.out.println("Private Access Specifier");
+				PrivateAccessSpecifier  obj = new PrivateAccessSpecifier(); 
+		        obj.display();
+			}
+		}
+================================================================================================
+2c
+
+package AccessModifiers;
+
+public class ProtectedAccessSpecifier {
+	protected void display() 
+    { 
+        System.out.println("This is protected access specifier"); 
+    } 
+	public static void main(String[] args) {
+		ProtectedAccessSpecifier obj = new ProtectedAccessSpecifier ();   
+	       obj.display();  
+	}
+}
+
+====================================================================================================
+2D
+
+package AccessModifiers;
+
+public class PublicAccessSpecifier {
+	public void display() 
+    { 
+        System.out.println("This is Public Access Specifiers"); 
+    } 
+
+	public static void main(String[] args) {
+	
+		PublicAccessSpecifier obj = new PublicAccessSpecifier(); 
+        obj.display();  	
+	}
+}

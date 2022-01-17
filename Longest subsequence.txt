@@ -1,0 +1,31 @@
+
+
+class LongSubsequence {
+    static int max_num; 
+    static int a(int arr[], int n)
+    {      
+        if (n == 1)
+            return 1;
+        int res, max_ending_num = 1;
+        for (int i = 1; i < n; i++) {
+            res = a(arr, i);
+            if (arr[i - 1] < arr[n - 1] && res + 1 > max_ending_num)
+                max_ending_num = res + 1;
+        }
+        if (max_num < max_ending_num)
+            max_num = max_ending_num;
+        return max_ending_num;
+    }
+    static int b(int arr[], int n)
+    {   
+        max_num = 1; 
+        a(arr, n);
+          return max_num;
+    }
+     public static void main(String args[])
+    {
+        int arr[] = { 10, 22, 9, 38, 21, 56, 41, 60 };
+        int n = arr.length;
+        System.out.println("Length of b is " + b(arr, n) + "\n");
+    }
+}
